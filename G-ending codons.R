@@ -17,9 +17,9 @@ plot(nullx, nully,
      ylab = "G-ending 4 synonymous codons usage (%)",
      cex = 0.2,
      pch = 19,
-     xlim = c(0,85),
-     ylim = c(0,9))
-legend(0, 8.9, legend=c(colours$codonG4),
+     xlim = c(0,100),
+     ylim = c(0,100))
+legend(0, 90, legend=c(colours$codonG4),
        lty = 1,
        fill = colours$colour3, 
 )
@@ -39,7 +39,7 @@ lineCCG = abline(lm(CCG ~ x), col = "#0247FE", lwd = 1.5)
 lineCGG = abline(lm(CGG ~ x), col = "#4424D6", lwd = 1.5)
 lineGTG = abline(lm(GTG ~ x), col = "#C21460", lwd = 1.5)
 lineGCG = abline(lm(GCG ~ x), col = "#E67CCF", lwd = 1.5)
-lineGGG = abline(lm(GGG ~ x), col = "#d9ad7c", lwd = 1.5)
+lineGGG = abline(lm(GGG ~ x), col = "#FF3366", lwd = 1.5)
 
 # 2 synonymous codons
 
@@ -49,9 +49,9 @@ plot(nullx, nully,
      ylab = "G-ending 2 synonymus codons usage (%)",
      cex = 0.2,
      pch = 19,
-     xlim = c(0,85),
-     ylim = c(0,9))
-legend(0, 8.9, legend=c(colours$codonG2),
+     xlim = c(0,100),
+     ylim = c(0,100))
+legend(0, 90, legend=c(colours$codonG2),
        lty = 1,
        fill = colours$colour, 
 )
