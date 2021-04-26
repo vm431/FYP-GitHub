@@ -7,7 +7,7 @@ colours = read.csv("C:\\Users\\Valee\\Desktop\\FYP\\Results\\colours.csv", heade
 
 nullx = 0
 nully = 0
-x = codons$intergenicGC
+x = codons$IntergenicGC
 
 # 4 synonymous codons
 
@@ -17,9 +17,9 @@ plot(nullx, nully,
      ylab = "A-ending 4 synonymous codons usage (%)",
      cex = 0.2,
      pch = 19,
-     xlim = c(0,85),
-     ylim = c(0,10.5))
-legend(70, 10, legend=c(colours$codonA4),
+     xlim = c(0,100),
+     ylim = c(0,100))
+legend(70, 90, legend=c(colours$codonA4),
        lty = 1,
        fill = colours$colour3, 
 )
@@ -49,9 +49,9 @@ plot(nullx, nully,
      ylab = "A-ending 2 synonymous codons usage (%)",
      cex = 0.2,
      pch = 19,
-     xlim = c(0,85),
-     ylim = c(0,10.5))
-legend(70, 10, legend=c(colours$codonA2),
+     xlim = c(0,100),
+     ylim = c(0,100))
+legend(70, 90, legend=c(colours$codonA2),
        lty = 1,
        fill = colours$colour, 
 )
