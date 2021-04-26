@@ -1,0 +1,24 @@
+AminoAcids,Slope,GCcodon,GC2codon,Colours
+Isoleucine,-0.121,0.11,0,#6b5b95
+Lysine,-0.146,0.17,0,#feb236
+Leucine 2,-0.133,0.17,0,#d64161
+Asparagine,-0.092,0.17,0,#ff7b25
+Tyrosine,-0.047,0.17,0,#d6cbd3
+Phenylalanine,-0.043,0.17,0,#eca1a6
+Methionine,-0.009,0.33,0,#bdcebe
+Arginine 2,-0.082,0.5,0.5,#ada397
+Glutamic Acid,-0.027,0.5,0.5,#3e4444
+Serine 2,-0.014,0.5,0.5,#82b74b
+Glutamine,-0.013,0.5,0.5,#405d27
+Cysteine ,-0.003,0.5,0.5,#c1946a
+Serine 4,-0.0019,0.5,0.5,#92a8d1
+Threonine,0.006,0.5,0.5,#034f84
+Histidine,0.008,0.5,0.5,#f7cac9
+Aspartic Acid,0.013,0.5,0.5,#f7786b
+Valine,0.052,0.5,0.5,#667292
+Leucine 4,0.152,0.5,0.5,#622569
+Tryptophan,0.013,0.67,0.5,#588c7e
+Proline,0.062,0.83,1,#ff6f69
+Glycine,0.072,0.83,1,#ffcc5c
+Arginine 4,0.149,0.83,1,#d9ad7c
+Alanine,0.181,0.83,1,#a2836e
