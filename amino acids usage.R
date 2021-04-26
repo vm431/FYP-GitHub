@@ -1,6 +1,6 @@
 library(datasets)
 install.packages("pacman")
-pacman::p_load(pacman, caret, lars, tidyverse, dplyr, GGally, ggplot2, ggthemes,ggvis, httr, plotly, shiny, tidyr)
+pacman::p_load(pacman, caret, lars, tidyverse, dplyr, GGally, ggplot2, ggthemes,ggvis, httr, plotly, shiny, tidyr, ggrepel, dplyr)
 
 
 GCdata = read.csv("C:\\Users\\Valee\\Desktop\\FYP\\Results\\GCdata.csv", header=TRUE, sep = ",")
@@ -469,23 +469,41 @@ legend(5, 15, legend=c(paste("Equation: y =", round(a, digits=0), ifelse(sign(b)
 
 #amino acids slope over codon GC content                  
 
-aaslope = read.csv("C:\\Users\\Valee\\Desktop\\FYP\\Results\\aaslope1.csv", header=TRUE, sep = ",")
+aaslope = read.csv("C:\\Users\\Valee\\Desktop\\FYP\\results\\aaslopefinal.csv", header=TRUE, sep = ",")
+aminoacids = aaslope$AminoAcids
+colour = aaslope$Colours
+GC2 = aaslope$GC2codon
+slope = aaslope$Slope
 
-sp <- plot(aaslope$GCcodon, aaslope$Slope,
-           main = "Relation between amino acids over intergenomic GC slope and codon GC content",
-           xlab = "Codon GC content",
-           ylab = "Amino Acid usage over itergenomic GC slope",
-           col = "#7C3194", 
-           pch = 19,
-           xlim = c(0,1),
-           ylim = c(-0.2,0.2),
-           cex = 0.8,
-           abline(lm(aaslope$Slope ~ aaslope$GCcodon), col = "#431A50"))
-legend(0.05, 0.2, legend=c(paste("Equation: y =", round(a, digits=0), ifelse(sign(b) == 1, "+", "-"), round(abs(b), digits=3), "· x"), 
+plot(GC2, slope, 
+     main = "Relation between amino acids over intergenic GC slope and codon GC content at the first 2 positions",
+     xlab = "Codon GC content at the first 2 positions",
+     ylab = "Amino Acid usage over intergenic GC slope",
+     abline(lm(aaslope$Slope ~ aaslope$GC2codon), col = "#431A50"))
+
+
+sp <- ggplot(data = aaslope, aes(x = GC2, y = slope, color =colour),
+             main = "Relation between amino acids over intergenic GC slope and codon GC content at the first 2 positions",
+             xlab = "Codon GC content at the first 2 positions",
+             ylab = "Amino Acid usage over intergenic GC slope",
+             col = "#7C3194", 
+             pch = 19,
+             xlim = c(0,1),
+             ylim = c(-0.2,0.2),
+             cex = 0.8,
+             abline(lm(aaslope$Slope ~ aaslope$GC2codon), col = "#431A50"))
+            
+legend(0.05, 0.2, legend=c(paste("Equation: y =", round(a, digits=3), ifelse(sign(b) == 1, "+", "-"), round(abs(b), digits=3), "· x"), 
                         paste("r2 =", rsq)))
+sp+
+   geom_label_repel(aes(label = aminoacids, col =colour), nudge_y = 0.005, nudge_x = 0.05)
 
 
-regline <- lm(aaslope$slope ~ aaslope$GCcodon)
+regline <- lm(aaslope$Slope ~ aaslope$GC2codon)
 a <- regline$coefficients[1]
 b <- regline$coefficients[2]
 rsq = format(summary(regline)$r.squared, digits = 3)
+regline
+a
+
+rlang::last_error()
