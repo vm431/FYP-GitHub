@@ -32,6 +32,7 @@ AAT = codons$AAT
 AGT = codons$AGT
 TAT = codons$TAT
 TTT = codons$TTT
+TGT = codons$TGT
 CAT = codons$CAT
 GAT = codons$GAT
 lineAAT = abline(lm(AAT ~ x), col = "#FE2712", lwd = 1.5)
