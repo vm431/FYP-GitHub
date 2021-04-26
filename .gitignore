@@ -1,3 +1,14 @@
+# Local artifacts
+*.txt
+*.ppt
+genomes/
+filtered_genomes/
+results/
+.vscode
+.DS_store
+.ipynb_checkpoints   
+Codon usage percentage.ipynb
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
