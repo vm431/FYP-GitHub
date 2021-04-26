@@ -70,7 +70,6 @@ lineAGC = abline(lm(AGC ~ x), col = "#e06377", lwd = 1.5) #low line
 lineTAC = abline(lm(TAC ~ x), col = "#d9ad7c", lwd = 1.5) #low line
 lineTTC = abline(lm(TTC ~ x), col = "#FEFE33", lwd = 1.5)
 lineTGC = abline(lm(TGC ~ x), col = "#a2836e", lwd = 1.5) #lowest line
-lineCTC = abline(lm(CTC ~ x), col = "#347C98", lwd = 1.5)
 lineGAC = abline(lm(GAC ~ x), col = "#b8a9c9", lwd = 1.5)
 
 
